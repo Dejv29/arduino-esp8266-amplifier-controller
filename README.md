@@ -7,7 +7,7 @@
 Tento projekt je komplexní řídicí systém pro klasický analogový zesilovač postavený na Arduino Nano a  ESP8266. Cílem bylo zachovat původní analogový charakter zesilovače (včetně manuálního ovládání hlasitosti), ale doplnit jej o moderní funkce – IR ovládání, webové rozhraní, vzdálený panel na terase a síťové API. 
    
     
-Architektura  
+**Architektura**  
 
 Systém je rozdělen na dvě části:  
    
