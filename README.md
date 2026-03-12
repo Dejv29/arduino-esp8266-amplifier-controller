@@ -3,9 +3,10 @@
  Hybrid analog/digital amplifier controller with IR learning, motorized ALPS potentiometer feedback and ESP8266 web API.  
    
     
-**Arduino + ESP8266 Amplifier Controller**  
-**Tento projekt je komplexní řídicí systém pro klasický analogový zesilovač postavený na ** **Arduino Nano** ** a  ** **ESP8266** **. Cílem bylo zachovat původní analogový charakter zesilovače (včetně manuálního ovládání hlasitosti), ale doplnit jej o moderní funkce – IR ovládání, webové rozhraní, vzdálený panel na terase a síťové API.**  
-**Architektura**  
+**Arduino + ESP8266 Amplifier Controller**
+Tento projekt je komplexní řídicí systém pro klasický analogový zesilovač postavený na Arduino Nano a  ESP8266. Cílem bylo zachovat původní analogový charakter zesilovače (včetně manuálního ovládání hlasitosti), ale doplnit jej o moderní funkce – IR ovládání, webové rozhraní, vzdálený panel na terase a síťové API. 
+Architektura  
+
 Systém je rozdělen na dvě části:  
    
  **Arduino Nano**  
