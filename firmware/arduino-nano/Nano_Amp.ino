@@ -191,7 +191,7 @@ bool buttonActionTaken = false;
 
 
 
-// Fiktivní hodnoty pro tlačítka (přes dělič odporů)
+// Tačítka (přes dělič odporů)
 Button getButtonFromADC(int adcVal) {
   //Serial.println(adcVal);
   //delay(1000);
@@ -296,20 +296,14 @@ void checkWifiSerial() {
   while (Serial.available()) {
     char cmd[32];
     byte len = Serial.readBytesUntil('\n', cmd, sizeof(cmd) - 1);
-    cmd[len] = '\0'; // ukončíme string
-
-    // Trim - odstranění bílých znaků na začátku a konci
-    // Arduino nemá vestavěný trim pro char*, takže implementujeme jednoduchý trim:
-    // odstraníme leading spaces
+    cmd[len] = '\0';
     int start = 0;
     while (cmd[start] == ' ' || cmd[start] == '\r' || cmd[start] == '\t') start++;
-    // odstraníme trailing spaces
     int end = len - 1;
     while (end >= start && (cmd[end] == ' ' || cmd[end] == '\r' || cmd[end] == '\t')) {
       cmd[end] = '\0';
       end--;
     }
-    // přesuneme string na začátek, pokud je start > 0
     if (start > 0) {
       for (int i = start; i <= end; i++) {
         cmd[i - start] = cmd[i];
@@ -317,7 +311,6 @@ void checkWifiSerial() {
       cmd[end - start + 1] = '\0';
     }
 
-    // Porovnání příkazů:    
     if (strcmp(cmd, "GET_POWER") == 0) {
       Serial.println(powerState ? "ON" : "OFF");
 
